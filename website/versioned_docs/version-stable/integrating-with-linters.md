@@ -1,7 +1,6 @@
 ---
-id: version-stable-integrating-with-linters
+id: integrating-with-linters
 title: Integrating with Linters
-original_id: integrating-with-linters
 ---
 
 Linters usually contain not only code quality rules, but also stylistic rules. Most stylistic rules are unnecessary when using Prettier, but worse – they might conflict with Prettier! Use Prettier for code formatting concerns, and linters for code-quality concerns, as outlined in [Prettier vs. Linters](comparison.md).
@@ -9,7 +8,6 @@ Linters usually contain not only code quality rules, but also stylistic rules. M
 Luckily it’s easy to turn off rules that conflict or are unnecessary with Prettier, by using these pre-made configs:
 
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-- [stylelint-config-prettier](https://github.com/prettier/stylelint-config-prettier)
 
 Check out the above links for instructions on how to install and set things up.
 
@@ -30,7 +28,7 @@ The downsides of those plugins are:
 - They are slower than running Prettier directly.
 - They’re yet one layer of indirection where things may break.
 
-Finally, we have tools that run `prettier` and then immediately for example `eslint --fix` on files.
+Finally, we have tools that run `prettier` and then immediately lint files by running, for example, `eslint --fix` on them.
 
 - [prettier-eslint](https://github.com/prettier/prettier-eslint)
 - [prettier-stylelint](https://github.com/hugomrdias/prettier-stylelint)
